@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 function Navbar() {
+	const isAuthenticated = localStorage.getItem('tokenBlog') !== null;
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 			<div className="container">
@@ -15,13 +16,22 @@ function Navbar() {
 						<li className="nav-item">
 							<Link to="/" className="nav-link">Home</Link>
 						</li>
-						<li className="nav-item">
-							<Link to="/login" className="nav-link">Login</Link>
-						</li>
+						{
+							isAuthenticated ? (
+								<li className="nav-item">
+									<Link to="/login" className="nav-link">Agregar un post</Link>
+								</li>
+							) : (
+									<li className="nav-item">
+										<Link to="/login" className="nav-link">Login</Link>
+									</li>
+								)
+						}
+
 						<li className="nav-item">
 							<Link to="/signup" className="nav-link" >Signup</Link>
 						</li>
-	
+
 					</ul>
 				</div>
 			</div>

@@ -31,7 +31,6 @@ function Home() {
 									: data.listPosts.map(post => (
 										<PostPreview _id={post._id} title={post.title} key={post._id} />
 									))
-
 							}
 						</div>
 					</section>

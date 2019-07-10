@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function PostPreview() {
+function PostPreview({_id,title}) {
 
 	return (
 		<div className="post-preview">
-			<Link to="/post/unid">
+			<Link to={`/post/${_id}`}>
 				<h2 className="post-title">
-					Man must explore, and this is exploration at its greatest
-		  </h2>
-				<h3 className="post-subtitle">
-					Problems look mighty small from 150 miles up
-		  </h3>
+					{title}
+		  		</h2>
+				
 			</Link>
 			<p className="post-meta">Posted by
 		  <a href="#">Start Bootstrap</a>

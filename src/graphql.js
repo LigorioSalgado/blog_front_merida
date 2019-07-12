@@ -3,7 +3,7 @@ import {createHttpLink } from 'apollo-link-http';
 import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-const API_URL = 'https://backendblog-7pvzldquh.now.sh/';
+const API_URL = 'https://backendblog-fvron8vkq.now.sh/';
 
 const httpLink = createHttpLink({
 	uri:API_URL

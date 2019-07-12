@@ -1,9 +1,11 @@
 import React from 'react';
 import image from '../images/home-bg.jpg';
+import PropTypes from 'prop-types';
 
-function Header() {
+function Header({cover}) {
+	const url =  cover ? cover:image;
 	return (
-		<header className="masthead" style={{backgroundImage:`url(${image})`}}>
+		<header className="masthead" style={{backgroundImage:`url(${url})`}}>
 			<div className="overlay"></div>
 			<div className="container">
 				<div className="row">
@@ -18,6 +20,14 @@ function Header() {
 		</header>
 	)
 
+}
+
+Header.propTypes  = {
+	cover: PropTypes.string.isRequired
+}
+
+Header.defaultProps = {
+	cover:image
 }
 
 

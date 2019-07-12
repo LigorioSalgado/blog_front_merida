@@ -5,6 +5,7 @@ import Home from './views/Home';
 import Post from './views/Post';
 import Login from './views/Login';
 import Signup from './views/Signup';
+import Create from './views/Create';
 
 
 function Logout(){
@@ -19,6 +20,7 @@ function Routes() {
    <>
 		<Route exact path="/" component={Home} />
 		<Route exact path="/post/:id" component={Post} />
+		<Route exact path="/post" component={Create} />
 		<Route exact path="/login" component={Login} />
 		<Route exact path="/signup" component={Signup} />
 		<Route exact path="/logout" component={SecureLogout} />
